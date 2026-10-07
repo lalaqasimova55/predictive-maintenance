@@ -1,0 +1,26 @@
+project:
+  name: predictive-maintenance
+  dataset: NASA C-MAPSS FD001
+  seed: 42
+split:
+  train_fraction: 0.8
+  validation_prefix_fraction: 0.70
+sequence:
+  window: 30
+missingness:
+  scenarios:
+    S0: clean
+    S1: random_10_percent
+    S2: random_20_percent
+    S3: short_sensor_gap
+  seeds: [7, 17, 27]
+models:
+  baseline: median
+  random_forest: true
+  xgboost: true
+  lstm: true
+dashboard:
+  top_k: [5, 10]
+  health_thresholds:
+    healthy_min_rul: 60
+    warning_min_rul: 30
