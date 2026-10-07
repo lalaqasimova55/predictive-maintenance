@@ -1,0 +1,9 @@
+{
+  "seed": 42,
+  "train_fraction": 0.8,
+  "validation_fraction": 0.2,
+  "validation_prefix_fraction": 0.70,
+  "engine_key": ["dataset_split", "engine_id"],
+  "engine_id_is_feature": false,
+  "notes": "Split by engine to prevent trajectory leakage."
+}
