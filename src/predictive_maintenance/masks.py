@@ -51,6 +51,7 @@ def short_gap_mask(
 
 def apply_sensor_mask(df: pd.DataFrame, mask: pd.DataFrame, sensor_columns: list[str]) -> pd.DataFrame:
     out = df.copy()
+    out[sensor_columns] = out[sensor_columns].astype("float64")
     aligned = mask.reindex(index=out.index, columns=sensor_columns, fill_value=False)
     out.loc[:, sensor_columns] = out[sensor_columns].mask(aligned)
     return out
