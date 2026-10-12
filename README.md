@@ -4,7 +4,7 @@ Remaining Useful Life (RUL) prediction using Random Forest, XGBoost and a compac
 
 ## ML Engineer 4 deliverables
 
-This branch contains repository setup, leakage-safe split contracts, integrity checks, the median baseline, a common experiment manifest, metric comparison utilities and the Streamlit control layer.
+This branch contains repository setup, leakage-safe split contracts, integrity checks, the median baseline, a common experiment manifest, metric comparison utilities and the Streamlit inference dashboard with replay and inspection queue. See [ML Engineer 4 Implementation & Verification Report](docs/ml_engineer4_report.md) for task-by-task status and the QA runbook.
 
 ## Reproducibility contract
 
