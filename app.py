@@ -127,7 +127,8 @@ def predict_prefix(model_name: str, model, prefix: pd.DataFrame, bundle) -> floa
         )
         prediction = float(predict_lstm(model, np.expand_dims(window, axis=0))[0])
     else:
-        prediction = float(model.predict([prefix])[0])
+        # Median baseline predicts the same training-target median for each prefix.
+        prediction = float(model.predict(1)[0])
 
     return max(0.0, prediction)
 
